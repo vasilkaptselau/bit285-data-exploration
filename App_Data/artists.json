@@ -1,0 +1,22 @@
+﻿{
+  "artists": [
+    {
+      "name": "Vincent Van Gogh",
+      "nationality": "Dutch",
+      "movement": "Post Impressionism",
+      "birthdate": "30th March 1853"
+    },
+    {
+      "name": "Paul Klee",
+      "nationality": "Swiss",
+      "movement": "Abstract Expressionism",
+      "birthdate": "18th December 1879"
+    },
+    {
+      "name": "Max Ernst",
+      "nationality": "German",
+      "movement": "Surrealism",
+      "birthdate": "2nd April 1891"
+    }
+  ]
+}

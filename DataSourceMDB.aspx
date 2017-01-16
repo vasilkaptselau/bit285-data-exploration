@@ -18,12 +18,12 @@
     
        // Fill the empty DataSet Object with the contents of the command object
        // NOTE: a data set can hold many tables, call this table "Ian"
-       DataSet DataSet1 = new DataSet();
-       objCommand.Fill(DataSet1, "Ian");
+       DataSet Products = new DataSet();
+       objCommand.Fill(Products, "myProducts");
     
        // Attach the data in the Dataset table to DataGrid
-       GridView1.DataSource=DataSet1.Tables["Ian"].DefaultView;
-       GridView1.DataBind();
+       gvGrocerToGo.DataSource=Products.Tables["myProducts"].DefaultView;
+       gvGrocerToGo.DataBind();
     }
 
 </script>
@@ -33,7 +33,7 @@
 </head>
 <body>
     <form  id="form1" runat="server">
-        <asp:GridView id="GridView1" runat="server"></asp:GridView>
+        <asp:GridView id="gvGrocerToGo" runat="server"></asp:GridView>
     
     </form>
 </body>

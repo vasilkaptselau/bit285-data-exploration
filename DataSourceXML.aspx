@@ -6,16 +6,17 @@
     /**
      *	An XML data-driven page using a DataSource Object
      */
-        DataSet _artists;
-    
-       void Page_Load()
-       {
-         String xmlFilename = Server.MapPath("~/App_Data/artists.xml");
-         _artists = new DataSet();
-         _artists.ReadXml(xmlFilename);
-         ian.DataSource = _artists;
-         ian.DataBind();
-       }
+    DataSet Artists; // a 
+
+    void Page_Load()
+    {
+        String xmlFilename = Server.MapPath("~/App_Data/artists.xml");
+        Artists = new DataSet();
+        Artists.ReadXml(xmlFilename);    
+
+        gvArtists.DataSource = Artists;
+        gvArtists.DataBind();
+    }
 
 </script>
 <html>
@@ -24,7 +25,7 @@
 </head>
 <body>
     <form  id="form1" runat="server">
-        <asp:GridView id="ian" runat="server"></asp:GridView>
+        <asp:GridView id="gvArtists" runat="server"></asp:GridView>
     </form>
 </body>
 </html>

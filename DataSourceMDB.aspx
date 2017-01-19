@@ -12,8 +12,8 @@
        strConnect += "Persist Security Info=False";
        OleDbConnection objConnection = new OleDbConnection(strConnect);
     
-    // SQL Command
-       string strCommand = "SELECT ProductName , UnitPrice  FROM products";
+    // New SQL Statement to show category name and product information
+       string strCommand = "SELECT Categories.CategoryName, Products.ProductName , Products.Manufacturer, Products.UnitPrice  FROM categories INNER JOIN products ON Categories.CategoryID=Products.CategoryID";
        OleDbDataAdapter objCommand = new OleDbDataAdapter(strCommand, objConnection);
     
        // Fill the empty DataSet Object with the contents of the command object
